@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intro to Computing Project</title>
+
+  <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #2E2E2E;
+        background-image: url("images/kows.jpg");
+        background-size: cover;      
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        opacity: 0;
+        animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    header {
+      background: none;
+      text-align: center;
+      padding: 25px 0;
+      color: #FFD700;
+    }
+
+    #nav {
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    #nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #FFFFFF;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    #nav a:hover {
+      color: #800080;
+      border-bottom: 2px solid #FF0000;
+      padding-bottom: 5px;
+    }
+
+    .footer {
+      text-align: center;
+      color: #FF0000;
+    }
+
+    /* ⭐ Bottom-left button */
+    .hey-btn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      padding: 12px 22px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      border: none;
+      background-color: #FFD700;
+      font-weight: bold;
+      z-index: 2000;
+    }
+
+   
+    #catPhoto {
+      display: none;
+      width: 250px;
+      border-radius: 10px;
+      position: fixed;
+      bottom: 80px;   
+      left: 20px;     
+      z-index: 1999;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Here are the Different Projects I had</h1>
+  </header>
+
+  <div id="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="project.html">Project</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+ 
+  <button class="hey-btn" onclick="showCat()">Hey</button>
+
+
+  <img id="catPhoto" src="images/catt.jfif" alt="My Cat">
+
+  <footer class="footer">
+    <p>@2025 Vhincent Salenga - Looking forward to next time!</p>
+  </footer>
+
+  <script>
+    function showCat() {
+        const img = document.getElementById("catPhoto");
+
+        img.style.display = "block";  
+        img.style.opacity = 0;
+        img.style.transition = "opacity 0.7s";
+
+        setTimeout(() => {
+            img.style.opacity = 1;
+        }, 50);
+    }
+  </script>
+
+</body>
+</html>
